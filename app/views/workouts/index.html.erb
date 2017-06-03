@@ -1,0 +1,17 @@
+<h1>Let's get after it</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Exercises</th>
+  </tr>
+
+  <% @workouts.each do |workout| %>
+    <tr>
+      <td><%= workout.date %></td>
+      <td><%= workout.exercises %></td>
+      <td><%= link_to 'Show', workout_path(workout) %></td>
+      <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+    </tr>
+  <% end %>
+</table>
